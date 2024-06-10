@@ -5,8 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# Replace with your actual OpenAI API key
-openai.api_key = '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'
+openai.api_key = os.getenv('OPENAI_API_KEY')
 client = openai.OpenAI(api_key=openai.api_key)
 ASSISTANT = None
 threads = {}
